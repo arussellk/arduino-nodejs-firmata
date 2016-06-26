@@ -1,0 +1,11 @@
+{
+  "name": "arduino-nodejs-firmata",
+  "version": "0.0.1",
+  "description": "arduino and node.js communication with firmata protocol",
+  "author": "Russell Kennington <arussellk@gmail.com>",
+  "main": "server.js",
+  "dependencies": {
+    "johnny-five": "^0.9.58",
+    "socket.io": "^1.4.8"
+  }
+}
