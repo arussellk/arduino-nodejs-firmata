@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Source (phone)</title>
+</head>
+<body>
+<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script>
+    var socket = io.connect('http://localhost:8000');
+
+    var radiansPerDegree = 3.14/180;
+    window.ondeviceorientation = _.throttle(function (x) {
+        var beta = x.beta * radiansPerDegree;
+        var gamma = x.gamma * radiansPerDegree;
+
+        socket.emit('deviceorientation', {
+            beta: beta,
+            gamma: gamma
+        });
+    }, 100);
+</script>
+</body>
+</html>
