@@ -4,7 +4,6 @@ There are two examples in this repo.
 2. A node.js socket server to listen for data from a device with a gyroscope
 
 ## Linking a node.js server to an arduino through the firmata protocol
----
 
 Quickstart
 
@@ -27,7 +26,6 @@ Getting firmata protocol on your board:
 3. Upload the file to your board
 
 ## deviceorientation example
----
 
 Quickstart
 
